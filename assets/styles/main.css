@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/Gilroy-Regular.woff') format('woff'),
+        url('~assets/fonts/Gilroy-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('~assets/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Gilroy-Medium.woff') format('woff'),
+    url('~assets/fonts/Gilroy-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('~assets/fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Gilroy-SemiBold.woff') format('woff'),
+    url('~assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('~assets/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Gilroy-Bold.woff') format('woff'),
+    url('~assets/fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    outline: none;
+}
+body {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    background: #181725;
+}
+img {
+    box-sizing: content-box;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    border: none;
+}
+a {
+    color: inherit;
+    border: none;
+}
+input, textarea, option, select, button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button {
+    user-select: none;
+    cursor: pointer;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #ffffff;
+}
+.scroll {
+    height: 100%;
+    overflow-y: scroll;
+}
+.container {
+    padding: 20px 20px 0;
+}
+.title {
+    margin: 0 0 25px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #181725;
+}
+@media (min-width: 1024px) {
+    .scroll {
+        margin: 0 -17px 0 0;
+    }
+}

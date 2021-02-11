@@ -2,17 +2,17 @@
     <div class="slider">
         <splide :options="options">
             <splide-slide>
-                <a class="slider-item" href="#">
+                <a class="slider_item" href="#">
                     <img src="/carousel/banner1.jpg" alt="">
                 </a>
             </splide-slide>
             <splide-slide>
-                <a class="slider-item" href="#">
+                <a class="slider_item" href="#">
                     <img src="/carousel/banner2.jpg" alt="">
                 </a>
             </splide-slide>
             <splide-slide>
-                <a class="slider-item" href="#">
+                <a class="slider_item" href="#">
                     <img src="/carousel/banner3.jpg" alt="">
                 </a>
             </splide-slide>
@@ -48,6 +48,12 @@
 </script>
 
 <style>
+    .slider {
+        margin: 0 0 30px;
+    }
+    .slider_item {
+        display: block;
+    }
     .splide__pagination__page {
         background: rgba(3, 3, 3, .3);
     }

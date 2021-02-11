@@ -96,8 +96,20 @@ button {
     text-align: center;
     color: #181725;
 }
+
 @media (min-width: 1024px) {
     .scroll {
         margin: 0 -17px 0 0;
     }
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img {
+    flex: 0 0 auto;
+    display: block;
+    max-height: 100%;
 }

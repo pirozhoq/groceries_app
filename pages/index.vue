@@ -3,24 +3,33 @@
         <h1 class="title">Grocery</h1>
         <Search/>
         <Slider/>
-        <ProductList :products="products"/>
+        <Carousel v-for="(carousel, index) in carousels" :carousel="carousel"/>
     </div>
 </template>
 
 <script>
     import Search from "~/components/Search";
     import Slider from "~/components/index/Slider";
-    import ProductList from "~/components/ProductList";
+    import Carousel from "~/components/index/Carousel";
 
     export default {
         components: {
+            Carousel,
             Search,
-            Slider,
-            ProductList
+            Slider
         },
         data() {
             return {
-                products: this.$store.state.products.list
+                carousels: [
+                    {
+                        title: 'Exclusive Offer',
+                        products: this.$store.state.products.list
+                    },
+                    {
+                        title: 'Best Selling',
+                        products: this.$store.state.products.list
+                    }
+                ]
             }
         }
     }

@@ -1,9 +1,15 @@
 <template>
-    <div class="container">
-        <h1 class="title">Grocery</h1>
-        <Search/>
-        <Slider/>
-        <Carousel v-for="(carousel, index) in carousels" :carousel="carousel"/>
+    <div>
+        <div class="top">
+            <div class="top_action"></div>
+            <div class="top_title">Grocery</div>
+            <div class="top_action"></div>
+        </div>
+        <div class="container">
+            <Search/>
+            <Slider/>
+            <Carousel v-for="(carousel, index) in carousels" :carousel="carousel"/>
+        </div>
     </div>
 </template>
 

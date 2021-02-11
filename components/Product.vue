@@ -1,10 +1,10 @@
 <template>
     <div class="product">
-        <a class="image product_image" :href="`/product/${product.id}`">
+        <NuxtLink class="image product_image" :to="`/product/${product.id}`">
             <img :src="require(`@/static/product/${product.image}`)" alt="">
-        </a>
+        </NuxtLink>
         <p class="product_name">
-            <a :href="`/product/${product.id}`">{{ product.name }}</a>
+            <NuxtLink :to="`/product/${product.id}`">{{ product.name }}</NuxtLink>
         </p>
         <div class="product_measure">{{ product.measure }}</div>
         <div class="product_incart">

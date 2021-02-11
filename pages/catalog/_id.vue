@@ -1,17 +1,20 @@
 <template>
-    <div class="container">
-        <h1 class="title">{{ category.name }}</h1>
-        <ProductList :products="products"/>
+    <div>
+        <div class="top">
+            <div class="top_action"></div>
+            <div class="top_title">{{ category.name }}</div>
+            <div class="top_action"></div>
+        </div>
+        <div class="container">
+            <ProductList :products="products"/>
+        </div>
     </div>
 </template>
 
 <script>
     import ProductList from "~/components/ProductList";
 
-    window.scrollTo(0, 0);
-
     export default {
-        scrollToTop: true,
         async asyncData({ params, store }) {
             return {
                 category: store.state.categories.list.find(category => category.id == params.id),

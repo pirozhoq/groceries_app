@@ -1,6 +1,13 @@
 <template>
-    <div class="container">
-        <h1 class="title">Account</h1>
+    <div>
+        <div class="top">
+            <div class="top_action"></div>
+            <div class="top_title">Account</div>
+            <div class="top_action"></div>
+        </div>
+        <div class="container">
+
+        </div>
     </div>
 </template>
 

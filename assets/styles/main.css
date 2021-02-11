@@ -77,14 +77,9 @@ button {
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    background: #ffffff;
-}
-.scroll {
     height: 100%;
-    overflow-y: scroll;
+    margin: 0 auto;
+    background: #ffffff;
 }
 .container {
     padding: 20px 20px 0;
@@ -95,12 +90,6 @@ button {
     font-weight: 700;
     text-align: center;
     color: #181725;
-}
-
-@media (min-width: 1024px) {
-    .scroll {
-        margin: 0 -17px 0 0;
-    }
 }
 
 .image {

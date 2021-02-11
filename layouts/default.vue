@@ -1,9 +1,7 @@
 <template>
     <div class="wrap">
-        <div class="scroll">
-            <Nuxt />
-            <Nav/>
-        </div>
+        <Nuxt />
+        <Nav/>
     </div>
 </template>
 

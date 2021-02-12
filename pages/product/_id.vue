@@ -5,7 +5,7 @@
                 <div class="top_action">
                     <button class="top_button"
                             type="button"
-                            @click="goBack()">
+                            @click="goBack">
                         <img :src="require(`/assets/images/back.svg`)" alt="">
                     </button>
                 </div>
@@ -26,12 +26,14 @@
                 <h1 class="product_name">{{ product.name }}</h1>
                 <div class="product_measure">{{ product.measure }}</div>
                 <div class="product_incart">
-                    <Count value="1"/>
+                    <Count :value="quantity" @changed="changeQuantity"/>
                     <div class="product_price">${{ product.price }}</div>
                 </div>
                 <ProductTab v-for="(tab, index) in tab_list" :key="index" :tab="tab"/>
                 <div class="product_button">
-                    <button class="button" type="button">Add To Cart</button>
+                    <button class="button"
+                            type="button"
+                            @click="addToCart">Add To Cart</button>
                 </div>
             </div>
         </div>
@@ -59,17 +61,24 @@
                     { title: 'Product Detail', active: true },
                     { title: 'Nutritions', active: false },
                     { title: 'Reviews', active: false }
-                ]
+                ],
+                quantity: 1
             }
         },
         methods: {
             goBack() {
-                this.$router.go(-1)
+                this.$router.go(-1);
             },
-            toggleBlock() {
-
+            addToCart() {
+                this.$store.commit('cart/addToList', {
+                    id: this.product.id,
+                    quantity: this.quantity
+                });
+            },
+            changeQuantity(quantity) {
+                this.quantity = quantity;
             }
-        }
+        },
     }
 </script>
 

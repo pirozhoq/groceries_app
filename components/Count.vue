@@ -22,9 +22,11 @@
         methods: {
             incValue() {
                 this.count_value = this.count_value + 1;
+                this.$emit('changed', this.count_value);
             },
             decValue() {
                 this.count_value = this.count_value > 1 ? this.count_value - 1 : 1;
+                this.$emit('changed', this.count_value);
             }
         }
     }

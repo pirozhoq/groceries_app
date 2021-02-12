@@ -23,7 +23,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .product {
         width: calc((100% - 40px) / 2);
         margin: 0 10px 20px;

@@ -8,7 +8,7 @@
         <div class="container">
             <Search/>
             <Slider/>
-            <Carousel v-for="(carousel, index) in carousels" :carousel="carousel"/>
+            <Carousel v-for="(carousel, index) in carousels" :key="index" :carousel="carousel"/>
         </div>
     </div>
 </template>

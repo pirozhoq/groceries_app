@@ -30,6 +30,9 @@
                     <div class="product_price">${{ product.price }}</div>
                 </div>
                 <ProductTab v-for="(tab, index) in tab_list" :key="index" :tab="tab"/>
+                <div class="product_button">
+                    <button class="button" type="button">Add To Cart</button>
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +73,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .product_top {
         background: #F2F3F2;
     }
@@ -79,7 +82,7 @@
         padding: 0 0 30px;
     }
     .product_content {
-        padding: 30px 0;
+        padding: 30px 0 0;
     }
     .product_name {
         margin: 0 0 10px;
@@ -102,5 +105,14 @@
         font-size: 24px;
         font-weight: 700;
         color: #181725;
+    }
+    .product_button {
+        position: sticky;
+        bottom: 0;
+        margin: 15px -20px 0;
+        padding: 20px;
+        border-radius: 15px 15px 0 0;
+        background: #ffffff;
+        box-shadow: 0 -6px 6px 0 rgba(230, 235, 243, .5);
     }
 </style>

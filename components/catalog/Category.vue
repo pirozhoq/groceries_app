@@ -1,7 +1,7 @@
 <template>
-    <NuxtLink class="category" :to="`/catalog/${category.id}`">
+    <NuxtLink class="category" :to="`/catalog/${ category.id }`">
         <div class="image category_image">
-            <img :src="require(`@/static/category/${category.image}`)" alt="">
+            <img :src="require(`@/static/category/${ category.image }`)" alt="">
         </div>
         <p class="category_name">{{ category.name }}</p>
     </NuxtLink>

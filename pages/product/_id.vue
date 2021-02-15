@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="image product_image">
-                <img :src="require(`/static/product/${product.image}`)" alt="">
+                <img :src="require(`/static/product/${ product.image }`)" alt="">
             </div>
         </div>
         <div class="product_content">

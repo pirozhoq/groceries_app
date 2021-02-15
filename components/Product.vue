@@ -1,15 +1,16 @@
 <template>
     <div class="product">
-        <NuxtLink class="image product_image" :to="`/product/${product.id}`">
-            <img :src="require(`@/static/product/${product.image}`)" alt="">
+        <NuxtLink class="image product_image" :to="`/product/${ product.id }`">
+            <img :src="require(`@/static/product/${ product.image }`)" alt="">
         </NuxtLink>
         <p class="product_name">
-            <NuxtLink :to="`/product/${product.id}`">{{ product.name }}</NuxtLink>
+            <NuxtLink :to="`/product/${ product.id }`">{{ product.name }}</NuxtLink>
         </p>
         <div class="product_measure">{{ product.measure }}</div>
         <div class="product_incart">
             <div class="product_price">${{ product.price }}</div>
-            <button class="product_button">
+            <button class="product_button"
+                    @click="addToCart">
                 <img :src="require(`/assets/images/add.svg`)" alt="">
             </button>
         </div>
@@ -19,7 +20,15 @@
 <script>
     export default {
         name: 'Product',
-        props: ['product']
+        props: ['product'],
+        methods: {
+            addToCart() {
+                this.$store.commit('cart/addToList', {
+                    id: this.product.id,
+                    quantity: 1
+                });
+            }
+        }
     }
 </script>
 

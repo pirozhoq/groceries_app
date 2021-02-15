@@ -12,8 +12,10 @@
                 <div class="top_title"></div>
                 <div class="top_action">
                     <button class="top_button"
-                            type="button">
-                        <img :src="require(`/assets/images/fav.svg`)" alt="">
+                            type="button"
+                            @click="addToFav">
+                        <img v-if="isFavorite" :src="require(`/assets/images/fav-active.svg`)" alt="">
+                        <img v-else :src="require(`/assets/images/fav.svg`)" alt="">
                     </button>
                 </div>
             </div>
@@ -29,12 +31,12 @@
                     <Count :value="quantity" @changed="changeQuantity"/>
                     <div class="product_price">${{ product.price }}</div>
                 </div>
-                <ProductTab v-for="(tab, index) in tab_list" :key="index" :tab="tab"/>
                 <div class="product_button">
                     <button class="button"
                             type="button"
                             @click="addToCart">Add To Cart</button>
                 </div>
+                <ProductTab v-for="(tab, index) in tab_list" :key="index" :tab="tab"/>
             </div>
         </div>
     </div>
@@ -45,7 +47,6 @@
     import ProductTab from "~/components/ProductTab";
 
     export default {
-        layout: 'product',
         components: {
             Count,
             ProductTab
@@ -77,8 +78,17 @@
             },
             changeQuantity(quantity) {
                 this.quantity = quantity;
+            },
+            addToFav() {
+                this.$store.commit('favorite/toggleInList', this.product.id);
             }
         },
+        computed: {
+            isFavorite() {
+                let product_id = this.$route.params.id;
+                return this.$store.state.favorite.list.find(product => product == product_id)
+            }
+        }
     }
 </script>
 
@@ -108,7 +118,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 0 30px;
+        margin: 0 0 20px;
     }
     .product_price {
         font-size: 24px;
@@ -116,12 +126,6 @@
         color: #181725;
     }
     .product_button {
-        position: sticky;
-        bottom: 0;
-        margin: 15px -20px 0;
-        padding: 20px;
-        border-radius: 15px 15px 0 0;
-        background: #ffffff;
-        box-shadow: 0 -6px 6px 0 rgba(230, 235, 243, .5);
+        margin: 0 0 25px;
     }
 </style>

@@ -5,14 +5,31 @@
             <div class="top_title">Favorite</div>
             <div class="top_action"></div>
         </div>
-        <div class="container">
-
+        <div v-if="products.length" class="container">
+            <ProductList :products="products"/>
+        </div>
+        <div v-else class="container">
+            <div class="message">No favorite</div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {}
+    import FavProduct from "~/components/ProductList";
+
+    export default {
+        methods: {
+            getProductInfo(item) {
+                let product = this.$store.state.products.list.find(x =>x.id == item);
+                return { ...product };
+            }
+        },
+        computed: {
+            products() {
+                return this.$store.state.favorite.list.map(item => this.getProductInfo(item));
+            }
+        }
+    }
 </script>
 
 <style></style>

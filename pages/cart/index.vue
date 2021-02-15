@@ -5,8 +5,12 @@
             <div class="top_title">My Cart</div>
             <div class="top_action"></div>
         </div>
-        <div class="container">
+        <div v-if="products.length" class="container">
             <CartProduct v-for="(product, index) in products" :key="index" :product="product"/>
+            <button class="button cart_button" type="button">Checkout</button>
+        </div>
+        <div v-else class="container">
+            <div class="message">Empty cart</div>
         </div>
     </div>
 </template>
@@ -29,4 +33,8 @@
     }
 </script>
 
-<style></style>
+<style>
+    .cart_button {
+        margin: 25px 0 0;
+    }
+</style>

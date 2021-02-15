@@ -31,7 +31,10 @@
 <style>
     .product_tab {
         padding: 15px 0;
-        border-top: 1px solid #E2E2E2;
+        border-bottom: 1px solid #E2E2E2;
+    }
+    .product_tab:last-child {
+        border-bottom: none;
     }
     .product_tab_head {
         display: flex;

@@ -49,7 +49,7 @@ export const state = () => ({
             measure: '320ml'
         },
         {
-            id: 6,
+            id: 7,
             category_id: 5,
             name: 'Egg Chicken Red',
             image: 'egg_chicken_red.png',
@@ -57,7 +57,7 @@ export const state = () => ({
             measure: '4pcs'
         },
         {
-            id: 7,
+            id: 8,
             category_id: 5,
             name: 'Egg Chicken White',
             image: 'egg_chicken_white.png',
@@ -65,7 +65,7 @@ export const state = () => ({
             measure: '4pcs'
         },
         {
-            id: 8,
+            id: 9,
             category_id: 0,
             name: 'Egg Noodles',
             image: 'egg_noodles.png',

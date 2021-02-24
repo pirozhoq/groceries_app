@@ -75,6 +75,11 @@
                     id: this.product.id,
                     quantity: this.quantity
                 });
+
+                $nuxt.$emit('notify', {
+                    type: 'success',
+                    text: 'Added to Cart'
+                });
             },
             changeQuantity(quantity) {
                 this.quantity = quantity;

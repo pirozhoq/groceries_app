@@ -133,6 +133,7 @@ button {
 }
 
 .button {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,4 +153,7 @@ button {
     user-select: none;
     background: #53B175;
     cursor: pointer;
+}
+.button:active {
+    top: 1px;
 }

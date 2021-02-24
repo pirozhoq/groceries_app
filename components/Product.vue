@@ -72,6 +72,7 @@
         font-weight: 600;
     }
     .product_button {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -80,6 +81,9 @@
         padding: 0;
         border-radius: 8px;
         background: #53B175;
+    }
+    .product_button:active {
+        top: 1px;
     }
     .product_button img {
         width: 16px;

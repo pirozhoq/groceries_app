@@ -26,7 +26,7 @@
                 this.is_show = true;
                 setTimeout(() => {
                     this.is_show = false;
-                }, 3000)
+                }, 2000)
             })
         }
     }

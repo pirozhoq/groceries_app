@@ -106,7 +106,7 @@
         padding: 0 0 30px;
     }
     .product_content {
-        padding: 30px 0 0;
+        padding: 30px 0;
     }
     .product_name {
         margin: 0 0 10px;

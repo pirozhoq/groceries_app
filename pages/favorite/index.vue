@@ -2,14 +2,14 @@
     <div>
         <div class="top">
             <div class="top_action"></div>
-            <div class="top_title">Favorite</div>
+            <div class="top_title">Favorites</div>
             <div class="top_action"></div>
         </div>
         <div v-if="products.length" class="container">
             <ProductList :products="products"/>
         </div>
         <div v-else class="container">
-            <div class="message">No favorite</div>
+            <div class="message">No favorites</div>
         </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
         <Notification/>
-        <Nuxt />
+        <Nuxt/>
         <Nav/>
     </div>
 </template>

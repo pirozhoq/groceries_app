@@ -33,7 +33,7 @@
                     </clipPath>
                 </defs>
             </svg>
-            <span>Favorite</span>
+            <span>Favorites</span>
             <div v-if="fav_products.length" class="nav_badge">{{ fav_products.length }}</div>
         </NuxtLink>
         <NuxtLink class="nav_link" to="/account">
@@ -65,7 +65,7 @@
         right: 0;
         z-index: 99;
         display: flex;
-        margin: 30px 0 0;
+        margin: auto 0 0;
         padding: 6px 3px;
         border-radius: 15px 15px 0 0;
         background: #ffffff;

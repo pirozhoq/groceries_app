@@ -35,6 +35,6 @@
 
 <style>
     .cart_button {
-        margin: 25px 0 0;
+        margin: 25px 0 30px;
     }
 </style>

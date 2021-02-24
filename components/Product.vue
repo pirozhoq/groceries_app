@@ -27,6 +27,11 @@
                     id: this.product.id,
                     quantity: 1
                 });
+
+                $nuxt.$emit('notify', {
+                    type: 'success',
+                    text: 'Added to Cart'
+                });
             }
         }
     }

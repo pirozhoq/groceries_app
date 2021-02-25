@@ -1,10 +1,12 @@
 <template>
     <div class="product">
-        <div class="image product_image">
+        <NuxtLink class="image product_image" :to="`/product/${ product.id }`">
             <img :src="require(`/static/product/${ product.image }`)" alt="">
-        </div>
+        </NuxtLink>
         <div class="product_content">
-            <p class="product_name">{{ product.name }}</p>
+            <p class="product_name">
+                <NuxtLink :to="`/product/${ product.id }`">{{ product.name }}</NuxtLink>
+            </p>
             <div class="product_measure">{{ product.measure }}</div>
             <div class="product_incart">
                 <Count :value="product.quantity" @changed="changeQuantity"/>
@@ -84,6 +86,9 @@
         font-weight: 700;
         line-height: 20px;
         color: #181725;
+    }
+    .product_name a {
+        text-decoration: none;
     }
     .product_measure {
         font-size: 14px;

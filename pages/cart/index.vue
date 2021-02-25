@@ -7,7 +7,7 @@
         </div>
         <div v-if="products.length" class="container">
             <CartProduct v-for="(product, index) in products" :key="index" :product="product"/>
-            <button class="button cart_button" type="button">Checkout</button>
+            <button @click.prevent="CheckoutNotify" class="button cart_button" type="button">Checkout</button>
         </div>
         <div v-else class="container">
             <div class="message">Empty cart</div>
@@ -23,7 +23,13 @@
             getProductInfo(item) {
                 let product = this.$store.state.products.list.find(x =>x.id == item.id);
                 return { ...product, quantity: item.quantity };
-            }
+            },
+            CheckoutNotify() {
+                $nuxt.$emit('notify', {
+                    type: 'success',
+                    text: 'Checkout'
+                });
+            },
         },
         computed: {
             products() {

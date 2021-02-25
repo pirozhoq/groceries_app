@@ -8,7 +8,7 @@
             <div class="product_measure">{{ product.measure }}</div>
             <div class="product_incart">
                 <Count :value="product.quantity" @changed="changeQuantity"/>
-                <div class="product_price">${{ product.price }}</div>
+                <div class="product_price">${{ product_sum }}</div>
             </div>
             <button class="product_delete" type="button" @click="deleteFromCart">
                 <img :src="require(`/assets/images/delete.svg`)" alt="">
@@ -34,6 +34,11 @@
                 this.$store.commit('cart/delFromList', {
                     id: this.product.id
                 });
+            }
+        },
+        computed: {
+            product_sum() {
+                return Math.round(this.product.price * this.product.quantity * 100) / 100
             }
         }
     }

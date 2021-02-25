@@ -2,19 +2,19 @@
     <div class="slider">
         <splide :options="options">
             <splide-slide>
-                <a class="slider_item" href="#">
+                <NuxtLink class="slider_item" to="/catalog">
                     <img src="/carousel/banner1.jpg" alt="">
-                </a>
+                </NuxtLink>
             </splide-slide>
             <splide-slide>
-                <a class="slider_item" href="#">
+                <NuxtLink class="slider_item" to="/catalog">
                     <img src="/carousel/banner2.jpg" alt="">
-                </a>
+                </NuxtLink>
             </splide-slide>
             <splide-slide>
-                <a class="slider_item" href="#">
+                <NuxtLink class="slider_item" to="/catalog">
                     <img src="/carousel/banner3.jpg" alt="">
-                </a>
+                </NuxtLink>
             </splide-slide>
         </splide>
     </div>

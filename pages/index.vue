@@ -29,11 +29,13 @@
                 carousels: [
                     {
                         title: 'Exclusive Offer',
-                        products: this.$store.state.products.list
+                        products: this.$store.state.products.list.filter(product => product.id%2 == 0),
+                        path: '/exclusive'
                     },
                     {
                         title: 'Best Selling',
-                        products: this.$store.state.products.list
+                        products: this.$store.state.products.list.filter(product => product.id%2 != 0),
+                        path: '/best'
                     }
                 ]
             }

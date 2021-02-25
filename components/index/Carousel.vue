@@ -2,7 +2,7 @@
     <div class="carousel">
         <div class="carousel_caption">
             <p class="carousel_title">{{ carousel.title }}</p>
-            <a class="carousel_link" href="#">See all</a>
+            <NuxtLink class="carousel_link" :to="carousel.path">See all</NuxtLink>
         </div>
         <splide :options="options">
             <splide-slide v-for="(product, index) in carousel.products" :key="index">
